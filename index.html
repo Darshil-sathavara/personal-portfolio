@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>personal portfolio website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="images/logo.new.jpeg" class="logo" />
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <p>Front End Developer</p>
+          <h1>Hi, I am <span>Darshil</span><br />Sathavara</h1>
+        </div>
+      </div>
+    </div>
+    <!-- ---------------<about>-------------- -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/user.png" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About me</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
+              tempore ipsa atque optio quod earum cum corrupti nulla ab.
+              Consectetur, vero inventore omnis voluptate dolores beatae quae
+              nam autem alias?
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skill')">skills</p>
+              <p class="tab-links" onclick="opentab('experience')">experience</p>
+              <p class="tab-links" onclick="opentab('education')">education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>Front End </span><br />Developer</li>
+                <li><span>Web developer</span><br />Web app Development</li>
+                <li><span>App developer</span><br />Application Development ios/Andriod</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+                <ul>
+                  <li><span>2020 </span><br />higersecoundry school</li>
+                  <li><span>Web developer</span><br />Web app Development</li>
+                  <li><span>App developer</span><br />Application Development ios/Andriod</li>
+                </ul>
+              </div><div class="tab-contents" id="education">
+                <ul>
+                  <li><span>Front End </span><br />Developer</li>
+                  <li><span>Web developer</span><br />Web app Development</li>
+                  <li><span>App developer</span><br />Application Development ios/Andriod</li>
+                </ul>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classlist.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classlist.remove("active-tab");
+            }
+        }
+
+    </script>
+  </body>
+</html>
